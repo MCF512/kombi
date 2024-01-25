@@ -1,0 +1,19 @@
+version: '3'
+services:
+  kombi:
+    image: kombi
+    stdin_open: true
+    ports:
+      - "4050:4050"
+    networks:
+      - kombi-app
+
+  kombi-backend:
+    image: kombi-backend
+    ports:
+      - "4051:4051"
+    networks:
+      - kombi-app
+networks:
+  kombi-app:
+    driver: bridge
