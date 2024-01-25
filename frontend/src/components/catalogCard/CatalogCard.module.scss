@@ -1,0 +1,35 @@
+@use '../../variables';
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 450px;
+    width: 100%;
+    border: 1px solid #585f69;
+    border-radius: 5px;
+    padding-bottom: 15px;
+
+    img {
+        width: 100%;
+    }
+}
+
+
+.link {
+    text-decoration: none;
+    color: variables.$main-color;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 10px 0 10px;
+    text-align: center;
+    transition: opacity 0.3s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    @media (max-width: 470px) {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,21 @@
+@use '../../variables';
+
+.mainTitle {
+    font-size: 100px;
+    text-align: center;
+    color: variables.$main-color;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 0;
+    color: variables.$main-color;
+}
+
+.link {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+}

@@ -1,0 +1,21 @@
+@use '../../../variables';
+
+.slide {
+    height: 70vh;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    font-size: 50px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: variables.$main-color;
+}

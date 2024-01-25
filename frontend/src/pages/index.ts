@@ -1,0 +1,7 @@
+export * from './main/MainPage'
+export * from './delivery/Delivery'
+export * from './admin/AdminPage'
+export * from './catalog/Catalog'
+export * from './product/Product'
+export * from './contacts/ContactsPage'
+export * from './404/404'
