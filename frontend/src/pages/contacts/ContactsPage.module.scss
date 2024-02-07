@@ -8,3 +8,18 @@
     width: fit-content;
     text-align: right;
 }
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.socialIcon {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px 0 5px;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}

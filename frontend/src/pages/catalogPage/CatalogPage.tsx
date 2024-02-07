@@ -1,7 +1,8 @@
 import { CatalogOnMainPage, Page } from "../../components"
 import kombikorm from '../../assets/kombikorm.jpeg';
 import zerno from '../../assets/zerno.jpeg';
-import vitamins from '../../assets/vitamins.png'
+import supplements from '../../assets/dobavki.jpg'
+import amino from '../../assets/aminoak.jpg'
 
 export const CatalogPage = () => {
     return (
@@ -21,14 +22,14 @@ export const CatalogPage = () => {
                             image: zerno
                         },
                         {
-                            title: 'Витамины и добавки',
-                            href: '/catalog/vitamins',
-                            image: vitamins
+                            title: 'Добавки',
+                            href: '/catalog/supplements',
+                            image: supplements
                         },
                         {
-                            title: 'Витамины и добавки',
-                            href: '/catalog/vitamins',
-                            image: vitamins
+                            title: 'Аминокислоты',
+                            href: '/catalog/amino',
+                            image: amino
                         },
                     ]
                 }

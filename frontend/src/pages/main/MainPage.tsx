@@ -5,8 +5,9 @@ import rabbits from '../../assets/rabbits.jpeg';
 import kombikorm from '../../assets/kombikorm.jpeg';
 import zerno from '../../assets/zerno.jpeg';
 import wheat from '../../assets/wheat.svg';
-import vitamins from '../../assets/vitamins.png'
-import styles from './MainPage.module.scss'
+import styles from './MainPage.module.scss';
+import supplements from '../../assets/dobavki.jpg'
+import amino from '../../assets/aminoak.jpg'
 
 export const MainPage: React.FC = () => {
     return (
@@ -62,14 +63,14 @@ export const MainPage: React.FC = () => {
                             image: zerno
                         },
                         {
-                            title: 'Витамины и добавки',
-                            href: '/catalog/vitamins',
-                            image: vitamins
+                            title: 'Добавки',
+                            href: '/catalog/supplements',
+                            image: supplements
                         },
                         {
-                            title: 'Витамины и добавки',
-                            href: '/catalog/vitamins',
-                            image: vitamins
+                            title: 'Аминокислоты',
+                            href: '/catalog/amino',
+                            image: amino
                         },
                     ]
                 }

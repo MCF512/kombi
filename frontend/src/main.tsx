@@ -15,7 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/catalog' element={<CatalogPage/>} />
         <Route path='/product/:id' element={<ProductPage/>} />
         <Route path='/contacts' element={<ContactsPage/>} />
-        <Route path='/admin' element={<AdminPage/>} />
+        {/* <Route path='/admin' element={<AdminPage/>} /> */}
         <Route path='*' element={<Page404/>} />
       </Routes>
     </BrowserRouter>
