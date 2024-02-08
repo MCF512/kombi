@@ -4,7 +4,7 @@ services:
     image: kombi
     stdin_open: true
     ports:
-      - "4050:4050"
+      - "80:80"
     networks:
       - kombi-app
 

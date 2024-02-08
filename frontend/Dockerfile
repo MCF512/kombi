@@ -7,6 +7,6 @@ COPY . .
 RUN npm i
 RUN npm run build
 
-EXPOSE 4050
+EXPOSE 80
 
 CMD [ "npm", "run", "preview" ]
