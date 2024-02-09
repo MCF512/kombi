@@ -2,7 +2,8 @@ import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import upload from './middlewares/upload.js';
-import cors from 'cors'
+import cors from 'cors';
+import https from 'https';
 
 import Product from './models/Product.js';
 
@@ -10,11 +11,17 @@ dotenv.config()
 
 const PORT = process.env.PORT || 8080;
 
+const optionSSL = {
+    key: fs.readFileSync("/etc/letsencrypt/live/xn-----6kccjk3blftwu2p.xn--90ais/fullchain.pem"),
+    cert: fs.readFileSync("/etc/letsencrypt/live/xn-----6kccjk3blftwu2p.xn--90ais/privkey.pem")
+};
 
 const app = express()
 app.use(express.json());
 
 app.use(cors({credentials: true, origin: process.env.CLIENT_URL || `http://localhost:5173` }));
+
+https.createServer(optionSSL, app).listen(80, "xn-----6kccjk3blftwu2p.xn--90ais");
 
 try {
     app.listen(PORT, () => {
@@ -29,6 +36,10 @@ try {
 }
 
 app.use(express.static("./uploads"));
+
+app.get("*", function(req, res, next) {
+    res.redirect("https://" + req.headers.host + req.path);
+});
 
 app.post('/upload', upload.single('file'), (req, res) => {
     res.json(req.file.filename);
