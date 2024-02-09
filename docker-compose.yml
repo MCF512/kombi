@@ -3,17 +3,36 @@ services:
   kombi:
     image: kombi
     stdin_open: true
-    ports:
-      - "80:80"
-    networks:
-      - kombi-app
+    # networks:
+    #   - kombi-app
 
   kombi-backend:
     image: kombi-backend
     ports:
       - "4051:4051"
-    networks:
-      - kombi-app
-networks:
-  kombi-app:
-    driver: bridge
+    # networks:
+    #   - kombi-app
+
+  nginx:
+    container_name: nginx
+    restart: unless-stopped
+    image: nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes: 
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    command: certonly --webroot -w /var/www/certbot --force-renewal --email ylia7707028@gmail.com -d xn-----6kccjk3blftwu2p.xn--90ais --agree-tos
+
+# networks:
+#   kombi-app:
+#     driver: bridge

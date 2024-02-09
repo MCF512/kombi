@@ -11,7 +11,4 @@ export default defineConfig({
     strictPort: true,
     port: 80,
   },
-  build: {
-    outDir: '../backend/dist'
-  }
 })
