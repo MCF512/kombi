@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import upload from './middlewares/upload.js';
 import cors from 'cors';
-import https from 'https';
+import http from 'http';
 
 import Product from './models/Product.js';
 
@@ -21,7 +21,7 @@ app.use(express.json());
 
 app.use(cors({credentials: true, origin: process.env.CLIENT_URL || `http://localhost:5173` }));
 
-https.createServer(optionSSL, app).listen(80, "xn-----6kccjk3blftwu2p.xn--90ais");
+http.createServer(optionSSL, app).listen(80, "xn-----6kccjk3blftwu2p.xn--90ais");
 
 try {
     app.listen(PORT, () => {
