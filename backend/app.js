@@ -13,8 +13,8 @@ dotenv.config()
 const PORT = process.env.PORT || 8080;
 
 const optionSSL = {
-    key: fs.readFileSync("/etc/letsencrypt/live/xn-----6kccjk3blftwu2p.xn--90ais/fullchain.pem"),
-    cert: fs.readFileSync("/etc/letsencrypt/live/xn-----6kccjk3blftwu2p.xn--90ais/privkey.pem")
+    key: fs.readFileSync("../../../etc/letsencrypt/live/xn-----6kccjk3blftwu2p.xn--90ais/fullchain.pem"),
+    cert: fs.readFileSync("../../../etc/letsencrypt/live/xn-----6kccjk3blftwu2p.xn--90ais/privkey.pem")
 };
 
 const app = express()
