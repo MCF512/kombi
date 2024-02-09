@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import upload from './middlewares/upload.js';
 import cors from 'cors';
 import http from 'http';
+import fs from 'fs'
 
 import Product from './models/Product.js';
 
