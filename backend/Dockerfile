@@ -6,6 +6,7 @@ COPY . .
 
 RUN npm i
 
-EXPOSE 4051
+# EXPOSE 4051
+EXPOSE 80
 
-CMD [ "node", "app.js" ]
+CMD [ "node", "https_server.js" ]
