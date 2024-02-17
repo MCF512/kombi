@@ -10,3 +10,35 @@
 .textPart {
     font-size: 14px;
 }
+
+.marks {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+
+    @media (max-width: 555px) {
+        flex-direction: column;
+    }
+}
+
+.mark {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 555px) {
+        margin-bottom: 10px;
+    }
+
+    img {
+        max-width: 100px;
+        margin-right: 10px;
+
+        @media (max-width: 555px) {
+            max-width: 70px;
+        }
+    }
+
+    p {
+        font-size: 20px;
+    }
+}

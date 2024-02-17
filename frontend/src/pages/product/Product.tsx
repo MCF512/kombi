@@ -15,7 +15,8 @@ export const ProductPage = () => {
         tagRU: string,
         tagEN: string,
         weight: string,
-        size: string
+        size: string,
+        price?: string
     }
 
     const [product, setProduct] = useState<product>();
@@ -61,6 +62,11 @@ export const ProductPage = () => {
                                     <li className={styles.infoItem}>
                                         Тип: {product.tagRU}
                                     </li>
+                                    {product.price && (
+                                        <li className={styles.infoItem}>
+                                            <b>Цена:</b> {product.price}
+                                        </li>
+                                    )}
                                 </ul>
                             </div>
                         </div>

@@ -28,6 +28,9 @@ const productSchema = new Schema({
     size: {
         type: String,
         required: true
+    },
+    price: {
+        type: String,
     }
 
 })

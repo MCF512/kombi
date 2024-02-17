@@ -13,7 +13,10 @@ export const ContactsPage = () => {
                 />
 
                 <p className={styles.text}><b>Адрес:</b> улица Луначарского, 86к10, Речица, Гомельская область</p>
-                <p className={styles.textPhone}><b>Телефоны:</b> +375 (29) 244-91-32 <br></br> +375 (33) 304-86-72</p>
+                <p className={styles.text}><b>Время приема заказов:</b> ежедневно с 8:00 до 20:00</p>
+                <p className={styles.text}><b>Время работы:</b> ежедневно с 8:00 до 17:30</p>
+                <p className={styles.textPhone}><b>Телефоны:</b> <a href="tel:+375 (29) 244-91-32">+375 (29) 244-91-32</a> <br></br> <a href="tel:+375 (33) 304-86-72">+375 (33) 304-86-72</a></p>
+                <p className={styles.text}><b>Email:</b> <a href="mailto:ylia7707028@gmail.com">ylia7707028@gmail.com</a></p>
 
                 <div className={styles.social}>
                     <p className="label"><b>Наши соцсети:</b></p>
@@ -39,6 +42,11 @@ export const ContactsPage = () => {
                         </svg>
                     </a>
                 </div>
+
+                <p className={styles.text}><b>Номера телефонов уполномоченных по защите прав потребителей:</b> <br></br>Отдел торговли и услуг Речицкого районного комитета <br></br> 
+                    <a href="tel:8 (02340) 3-65-58">8 (02340) 3-65-58</a>, <a href="tel:8 (02340) 3-64-43">8 (02340) 3-64-43</a></p>
+                
+                <p className={styles.text}><b>Книга замечаний и предложений находится у продавца.</b></p>
             </Container>
         </Page>
     )

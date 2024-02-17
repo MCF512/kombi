@@ -5,9 +5,11 @@ import rabbits from '../../assets/rabbits.jpeg';
 import kombikorm from '../../assets/kombikorm.jpeg';
 import zerno from '../../assets/zerno.jpeg';
 import wheat from '../../assets/wheat.svg';
-import styles from './MainPage.module.scss';
 import supplements from '../../assets/dobavki.jpg'
 import amino from '../../assets/aminoak.jpg'
+import check from '../../assets/check.svg';
+import credit from '../../assets/credit.svg'
+import styles from './MainPage.module.scss';
 
 export const MainPage: React.FC = () => {
     return (
@@ -26,6 +28,19 @@ export const MainPage: React.FC = () => {
                     ]
                 }
             />
+
+            <Container>
+                <div className={styles.marks}>
+                    <div className={styles.mark}>
+                        <img src={check}/>
+                        <p className={styles.markText}>Гарантия возврата или обмена</p>
+                    </div>
+                    <div className={styles.mark}>
+                        <img src={credit}/>
+                        <p className={styles.markText}>Передаем в доставку без предоплаты</p>
+                    </div>
+                </div>
+            </Container>
 
             <Container>
                 <h2 className='title'>
